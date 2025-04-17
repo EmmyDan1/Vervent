@@ -6,7 +6,7 @@ import Img5 from './images/image5.jpg';
 import Img6 from './images/image6.jpg';
 import Img7 from './images/image7.jpg';
 import Img8 from './images/image8.jpg';
-import Img9 from './images/Image9.jpg';
+import Img9 from './images/image9.jpg';
 import Img10 from './images/image10.jpg';
 import Img11 from './images/image11.jpg';
 import Img12 from './images/image12.jpg';
