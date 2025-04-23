@@ -171,13 +171,13 @@ function Navbar() {
         </div>
 
         {mobileOpen && (
-          <div className="fixed  top-0 left-0 h-full w-full bg-white z-50 shadow-lg p-4 transition-all duration-300 md:hidden">
+          <div className="fixed top-0 left-0 h-full w-full bg-white z-50 shadow-lg p-4 transition-all duration-300 md:hidden overflow-y-auto">
             <div className="flex justify-between items-center text-sm gap-4">
               <div className="flex items-center justify-between mb-4 md:mb-0">
                 <div className="flex items-center text-[13px]">
                   <div className="flex flex-col">
                     <h3 className="font-semibold">Vervent</h3>
-                    <p className="border-b-2 border-black  text-center"></p>
+                    <p className="border-b-2 border-black text-center"></p>
                   </div>
                   <p className="ml-4">uBreakIFix</p>
                 </div>
@@ -187,14 +187,14 @@ function Navbar() {
                     <FaMapMarkerAlt className="mr-1" />
                     <span>Stores</span>
                   </div>
-                  <div className="flex items-center ">
+                  <div className="flex items-center">
                     <FaUser className="mr-1" />
                     <span>My Account</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-between mb-4 ">
+            <div className="flex items-center justify-between mb-4">
               <div className="text-2xl font-bold">Vervent</div>
               <button
                 onClick={() => setMobileOpen(false)}
