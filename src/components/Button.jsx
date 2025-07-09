@@ -1,6 +1,6 @@
-function Button({children, className}) {
+function Button({children, className, onClick}) {
     return (
-        <button className={` px-4 py-1 rounded-full text-sm ${className}`}>
+        <button className={` rounded-full text-sm ${className}`} onClick={onClick}>
             {children}
         </button>
     );

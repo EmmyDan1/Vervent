@@ -40,7 +40,9 @@ import CellularImg from "./images/CellularImg.svg";
 import LiveSupportImg from './images/LiveSpportImg.jpg';
 import ExpertImg1 from './images/ExpertImg1.jpg';   
 import ExpertImg2 from './images/ExpertImg2.jpg';
-import ExpertImg3 from './images/ExpertImg3.jpg';    
+import ExpertImg3 from './images/ExpertImg3.jpg'; 
+import FeaturePhone from './images/feature-phone_sm.webp'; 
+import FeatureSmPhone from './images/PhoneSm.jpg';  
 
 
 export const images = {
@@ -80,8 +82,9 @@ export const images = {
     LiveSupportImg,
     ExpertImg1,
     ExpertImg2,
-    ExpertImg3
-
+    ExpertImg3,
+    FeaturePhone,
+    FeatureSmPhone
 }
 
 export const Logos = [

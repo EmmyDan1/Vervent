@@ -6,6 +6,7 @@ import Dropdown from "./Dropdown";
 import { images } from "../assets/ImageData.js";
 import Button from "./Button";
 import SubHeader from "./DeviceProtection";
+import {useLocation, useNavigate} from "react-router-dom";
 const navLinks = [
   {
     title: "Claims",
@@ -96,6 +97,13 @@ const navLinks = [
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const navigate = useNavigate();
+    const location = useLocation(); 
+
+  const handleClaimClick = () => {
+    console.log("Navigating to Claims page...");
+    navigate("/Pages/Claims");
+  }
   return (
     <div>
       <nav className=" border-b shadow-sm bg-white md:px-10 relative">
@@ -154,10 +162,8 @@ function Navbar() {
                 </button>
               </li>
             ))}
-
-            {/* Centralized Dropdown (only one) */}
             {hoveredIndex !== null && (
-              <div className="absolute left-1/2 top-full mt-2 -translate-x-1/2 z-50 bg-white shadow-xl rounded-lg w-[1000px] p-6 transition-all duration-300 ease-in-out">
+              <div className="absolute left-1/2 top-full mt-2 -translate-x-1/2 z-50 bg-white shadow-xl rounded-lg w-[1000px] h-[350px] p-6 transition-all duration-300 ease-in-out">
                 <Dropdown
                   items={navLinks[hoveredIndex].items}
                   description={navLinks[hoveredIndex].description}
@@ -167,7 +173,7 @@ function Navbar() {
             )}
           </ul>
 
-          <Button className="bg-purple-600 text-white">Claims</Button>
+          <Button className="bg-purple-600 px-8 py-3 font-semibold pointer-cursor text-white" onClick={handleClaimClick}>Claims</Button>
         </div>
 
         {mobileOpen && (
@@ -176,21 +182,21 @@ function Navbar() {
               <div className="flex items-center justify-between mb-4 md:mb-0">
                 <div className="flex items-center text-[13px]">
                   <div className="flex flex-col">
-                    <h3 className="font-semibold">Vervent</h3>
+                    <button className="font-semibold">Vervent</button>
                     <p className="border-b-2 border-black text-center"></p>
                   </div>
-                  <p className="ml-4">uBreakIFix</p>
+                  <button className="ml-4">uBreakIFix</button>
                 </div>
 
                 <div className="flex items-center space-x-4 ml-10 text-[13px]">
-                  <div className="flex items-center">
+                  <button className="flex items-center">
                     <FaMapMarkerAlt className="mr-1" />
                     <span>Stores</span>
-                  </div>
-                  <div className="flex items-center">
+                  </button>
+                  <button className="flex items-center">
                     <FaUser className="mr-1" />
                     <span>My Account</span>
-                  </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -211,20 +217,21 @@ function Navbar() {
             </div>
 
             <div className="mt-6 space-y-3">
-              <div className="flex items-center">
+              <button className="flex items-center cursor-pointer">
                 <FaMapMarkerAlt className="mr-1" />
                 <span>Stores</span>
-              </div>
-              <div className="flex items-center">
+              </button>
+              <button className="flex items-center mb-4 cursor-">
                 <FaUser className="mr-1" />
                 <span>My Account</span>
-              </div>
-              <Button className="bg-purple-600 text-white">Claims</Button>
+              </button>
+
+              <Button className="bg-purple-600 text-white py-2 px-6 " onClick={handleClaimClick} >Claims</Button>
             </div>
           </div>
         )}
       </nav>
-      <SubHeader />
+       {location.pathname === "/" && <SubHeader />}
     </div>
   );
 }

@@ -8,7 +8,7 @@ const testimonials = [
     service: "Verizon Mobile Protect",
     quote:
       "The same day service is amazing! I was floored when I was told within hours I'd get a new phone!",
-    image: images.device6, // Replace with actual image path
+    image: images.device6, 
   },
   {
     name: "Chun",
@@ -73,13 +73,11 @@ const Testimonials = () => {
 
               <p className="text-sm text-gray-700">{item.quote}</p>
             </div>
-            {/* <div className="px-4 pt-2">
-              <StarRating />
-            </div> */}
+
           </div>
         ))}
       </div>
-      <div className="flex justify-center items-center mt-10 flex-wrap gap-6">
+      <div className="flex justify-center  mt-10 flex-wrap gap-6">
         <div className="flex flex-col items-center">
           <p className="font-semibold">Google</p>
           <StarRating />

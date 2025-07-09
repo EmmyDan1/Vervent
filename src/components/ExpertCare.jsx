@@ -4,17 +4,14 @@ import Button from "./Button";
 function ExpertCare() {
   return (
     <div className="flex flex-col md:flex-row gap-12 p-4 mx-auto items-center justify-between">
-      {/* Left Container */}
+  
       <div className="grid grid-rows-1 grid-cols-2 gap-4 w-full md:w-1/2">
-        {/* Top Image - takes full width */}
         <img
           src={images.ExpertImg1}
           alt="Top Image"
           className="col-span-5 h-48 w-full object-cover rounded-lg md:h-[300px]"
           loading="lazy"
         />
-
-        {/* Bottom Left Image */}
         <img
           src={images.ExpertImg2}
           alt="Bottom Left"
@@ -22,7 +19,6 @@ function ExpertCare() {
           loading="lazy"
         />
 
-        {/* Bottom Right Image */}
         <img
           src={images.ExpertImg3}
           alt="Bottom Right"
@@ -31,7 +27,7 @@ function ExpertCare() {
         />
       </div>
 
-      {/* Right Container */}
+   
       <div className="flex flex-col w-full md:w-1/2 -translate-y-4 md:translate-y-0">
         <div>
           <h2 className="text-2xl font-semibold mb-4">

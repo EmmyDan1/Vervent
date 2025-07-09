@@ -5,12 +5,12 @@ import DeviceSelector from "./DeviceSelector";
 function HeroSection() {
   return (
     <div className="w-full ">
-      <div className="relative w-full h-[300px] sm:h-[300px] md:h-[500px] lg:h-[580px] md:mt-8 md:max-w-[1350px] mx-auto overflow-hidden md:rounded-[35px]">
+      <div className="relative w-full h-[300px] sm:h-[300px] md:h-[500px] lg:h-[580px] md:mt-8 md:max-w-[1350px] mx-auto overflow-hidden md:rounded-[35px] ">
         <img
           src={HeroImage}
           alt="Hero"
-          className="w-full h-full object-cover"
-          loading="lazy"
+          className="w-full h-full object-cover "
+          
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/100"></div>
 

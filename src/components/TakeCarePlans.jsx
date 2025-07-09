@@ -4,8 +4,8 @@ import { images } from "../assets/ImageData.js";
 const data = [
   {
     label: "Whole home",
-    thumb: images.WashingMacImg, // small image
-    image: images.MyImg1, // large image
+    thumb: images.WashingMacImg,
+    image: images.MyImg1,
   },
   {
     label: "Home tech",
@@ -25,12 +25,11 @@ const data = [
 ];
 
 export default function TechCarePlans() {
-  const [selected, setSelected] = useState(2); // default to Appliance
+  const [selected, setSelected] = useState(2);
 
   return (
     <section className="w-full bg-white py-12 px-4">
       <div className="flex flex-col md:flex-row items-center mx-auto gap-8">
-        {/* Left Content */}
         <div className="flex flex-col w-full md:w-1/2 items-center md:items-start">
           <h2 className="text-[28px] font-semibold mb-4 text-center md:text-left">
             Tech care plans for life’s uh-ohs and what-ifs
@@ -45,9 +44,7 @@ export default function TechCarePlans() {
           </div>
         </div>
 
-        {/* Right Content */}
         <div className="max-w-sm md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-          {/* Tab Selectables */}
           <div className="flex md:justify-start justify-center gap-6 mb-6  md:w-[600px]">
             {data.map((item, index) => (
               <button
@@ -70,13 +67,11 @@ export default function TechCarePlans() {
             ))}
           </div>
 
-          {/* Description */}
           <p className="text-gray-700 mb-6 md:w-[600px]">
             Meet all-in-one tech care. Coverage for nearly all your devices and
             appliances, hands-on help tailored to your needs, and more.
           </p>
 
-          {/* Button */}
           <button className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">
             Protect your appliances
           </button>

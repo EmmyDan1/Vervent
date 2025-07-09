@@ -4,7 +4,7 @@ import { images } from "../assets/ImageData.js";
 function LiveSupport() {
   return (
     <div className="w-full">
-      {/* Mobile View */}
+    
       <div className="mb-4 md:hidden">
         <div>
           <img
@@ -29,7 +29,6 @@ function LiveSupport() {
         </div>
       </div>
 
-      {/* Desktop View */}
       <div className="hidden md:flex mx-auto px-4 py-10 gap-10 items-center justify-between">
         <div className="flex flex-col">
           <h2 className="text-2xl font-semibold mb-4">

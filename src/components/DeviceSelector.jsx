@@ -1,6 +1,6 @@
 import { FaGamepad } from "react-icons/fa";
 import { images } from "../assets/ImageData.js";
-import StickyMobileButton from "./StickyMobileButton.jsx"; // Adjust the import path as necessary
+import StickyMobileButton from "./StickyMobileButton.jsx"; 
 
 const deviceOptions = [
   { name: "Phone", image: images.device1 },
@@ -17,7 +17,7 @@ const DeviceSelector = ({ isOpen, toggleDropdown, closeDropdown }) => {
   return (
     <section className="">
       <div className="">
-        {/* DESKTOP BUTTON — Positioned where you want it */}
+    
         <div className="hidden md:block z-30 -translate-y-[298px] -translate-x-96">
           <button
             className="flex items-center justify-between bg-white text-black py-3 px-6 rounded-full shadow-md w-full max-w-md mx-auto focus:outline-none"
@@ -43,7 +43,7 @@ const DeviceSelector = ({ isOpen, toggleDropdown, closeDropdown }) => {
           </button>
         </div>
 
-        {/* MOBILE DROPDOWN — Slides up and covers bottom portion */}
+    
         {isOpen && (
           <>
             <div className="fixed inset-x-0 bottom-0 z-50 bg-white border-t border-gray-300 rounded-t-lg shadow-lg md:hidden transition-transform duration-300">
@@ -76,7 +76,7 @@ const DeviceSelector = ({ isOpen, toggleDropdown, closeDropdown }) => {
               </div>
             </div>
 
-            {/* DESKTOP DROPDOWN */}
+         
             <div className="absolute top-[80%] left-32 z-30 w-[500px] bg-white rounded-xl border border-gray-200 shadow-xl hidden md:block">
               <p className="text-center font-semibold py-4">
                 Select a device type we can help fix
