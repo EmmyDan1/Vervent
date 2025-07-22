@@ -1,6 +1,6 @@
 import { FaGamepad } from "react-icons/fa";
 import { images } from "../assets/ImageData.js";
-import StickyMobileButton from "./StickyMobileButton.jsx"; 
+import StickyMobileButton from "./StickyMobileButton.tsx"; 
 
 const deviceOptions = [
   { name: "Phone", image: images.device1 },

@@ -3,7 +3,7 @@ import NavItem from "./NavItem";
 import { FaMapMarkerAlt, FaUser } from "react-icons/fa";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 import Dropdown from "./Dropdown";
-import { images } from "../assets/ImageData.js";
+import { images } from "../assets/";
 import Button from "./Button";
 import SubHeader from "./DeviceProtection";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -135,9 +135,11 @@ function Navbar() {
             <button className="md:hidden" onClick={() => setMobileOpen(true)}>
               ☰
             </button>
-            <button>
-              <div className="text-2xl font-bold">Vervent</div>
-            </button>
+            <Link to="/" className="">
+              <button>
+                <div className="text-2xl font-bold">Vervent</div>
+              </button>
+            </Link>
           </div>
 
           <ul
